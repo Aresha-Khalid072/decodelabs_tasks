@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aresha Khalid — Frontend Craftsmanship</title>
-  <meta name="description" content="Portfolio of Aresha Khalid, Full-Stack Intern at DecodeLabs — Project 1: Responsive Frontend Interface.">
+  <title>Keystone — Project Management for Design Studios</title>
+  <meta name="description" content="Keystone is project management software built for architecture and design studios — one shared plan for timelines, documents, and client communication.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -15,9 +15,9 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="#top" class="logo" aria-label="Aresha Khalid home">
-        <span class="logo-mark" aria-hidden="true">AK</span>
-        <span class="logo-text">Aresha&nbsp;Khalid</span>
+      <a href="#top" class="logo" aria-label="Keystone home">
+        <span class="logo-mark" aria-hidden="true">K</span>
+        <span class="logo-text">Keystone</span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
@@ -29,10 +29,10 @@
 
       <nav class="primary-nav" id="primaryNav" aria-label="Primary">
         <ul>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#toolkit">Toolkit</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact" class="nav-cta">Contact</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#get-started" class="nav-cta">Start free trial</a></li>
         </ul>
       </nav>
     </div>
@@ -41,115 +41,158 @@
   <main id="main-content">
 
     <section class="hero" id="top" aria-labelledby="hero-heading">
-      <div class="hero-inner">
-        <p class="eyebrow">Full-Stack Intern &middot; DecodeLabs</p>
-        <h1 id="hero-heading">Building the interface layer,<br> one breakpoint at a time.</h1>
-        <p class="hero-lede">I'm Aresha — I turn wireframes into flexible, semantic front ends. No frameworks, just HTML5, CSS Grid, Flexbox, and a clear head for how a layout should breathe on any screen.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Project management for design studios</p>
+        <h1 id="hero-heading">Every drawing, every deadline, one set of plans.</h1>
+        <p class="hero-lede">Keystone replaces the email threads, shared drives, and sticky notes with a single timeline your whole studio — and your clients — can actually read.</p>
         <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">View the build</a>
-          <a href="#toolkit" class="btn btn-ghost">See the toolkit</a>
+          <a href="#get-started" class="btn btn-primary">Start free trial</a>
+          <a href="#product" class="btn btn-ghost">See how it works</a>
         </div>
       </div>
-      <div class="hero-blueprint" aria-hidden="true">
-        <div class="blueprint-frame">
-          <span class="frame-label">header</span>
-          <div class="frame-row">
-            <span class="frame-label small">nav</span>
+
+      <div class="hero-drawing" aria-hidden="true">
+        <div class="drawing-sheet">
+          <span class="dim-label top">Project timeline — 1 : 100</span>
+          <div class="drawing-row">
+            <span class="dim-label small">Phase 01 · Schematic</span>
+            <span class="dim-label small">Phase 02 · Design Dev</span>
           </div>
-          <div class="frame-main">
-            <span class="frame-label">main</span>
+          <div class="drawing-main">
+            <span class="dim-label">Client review — due Fri</span>
           </div>
-          <span class="frame-label">footer</span>
+          <span class="dim-label bottom">Keystone · Studio Plan</span>
         </div>
       </div>
     </section>
 
-    <section class="content-grid" id="work" aria-labelledby="work-heading">
+    <section class="problem" id="problem" aria-labelledby="problem-heading">
       <div class="section-head">
-        <p class="eyebrow">01 — The Grid</p>
-        <h2 id="work-heading">Layout building blocks</h2>
-        <p class="section-lede">Each card below is a landmark from the page's own blueprint — filter by role to see how the pieces fit together.</p>
+        <p class="eyebrow">The cost of no system</p>
+        <h2 id="problem-heading">Where studio time actually goes</h2>
       </div>
-
-      <div class="filter-bar" role="group" aria-label="Filter layout blocks by role">
-        <button class="filter-chip is-active" data-filter="all">All</button>
-        <button class="filter-chip" data-filter="structure">Structure</button>
-        <button class="filter-chip" data-filter="style">Style</button>
-        <button class="filter-chip" data-filter="logic">Logic</button>
-      </div>
-
-      <div class="cards" id="cardGrid">
-        <article class="card" data-role="structure">
-          <span class="card-tag">Structure</span>
-          <h3>Semantic landmarks</h3>
-          <p>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;footer&gt; — a table of contents for screen readers and search engines alike.</p>
-        </article>
-        <article class="card" data-role="style">
-          <span class="card-tag">Style</span>
-          <h3>CSS Grid, macro layout</h3>
-          <p>A strict two-dimensional floor plan for the page: header, sidebar, main content, footer, defined once and reflowed per breakpoint.</p>
-        </article>
-        <article class="card" data-role="style">
-          <span class="card-tag">Style</span>
-          <h3>Flexbox, micro components</h3>
-          <p>Nav links, buttons, and card contents align themselves along one axis — small, self-correcting arrangements inside the grid's cells.</p>
-        </article>
-        <article class="card" data-role="logic">
-          <span class="card-tag">Logic</span>
-          <h3>State &amp; interactivity</h3>
-          <p>A handful of vanilla JS listeners handle the menu toggle and this very filter — no dependencies required.</p>
-        </article>
-        <article class="card" data-role="structure">
-          <span class="card-tag">Structure</span>
-          <h3>Fluid typography</h3>
-          <p>Headline and body sizes scale with clamp(), so text stays readable from a 320px phone to a 1440px desktop.</p>
-        </article>
-        <article class="card" data-role="logic">
-          <span class="card-tag">Logic</span>
-          <h3>Accessible by default</h3>
-          <p>Visible focus states, a skip link, and reduced-motion support are part of the floor, not an afterthought.</p>
-        </article>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number">47</span>
+          <p>email threads open on one project by week three</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <p>different spreadsheets tracking the same deadline</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number">1</span>
+          <p>inbox holding the only copy of a client's final sign-off</p>
+        </div>
       </div>
     </section>
 
-    <section class="toolkit" id="toolkit" aria-labelledby="toolkit-heading">
+    <section class="features" id="product" aria-labelledby="features-heading">
       <div class="section-head">
-        <p class="eyebrow">02 — The Toolkit</p>
-        <h2 id="toolkit-heading">Raw materials</h2>
+        <p class="eyebrow">Product</p>
+        <h2 id="features-heading">One workspace, three views</h2>
+        <p class="section-lede">Switch views without switching tools — everyone on the project sees the same plan.</p>
       </div>
-      <div class="toolkit-grid">
-        <div class="tool">
-          <h3>HTML5</h3>
-          <p>The infrastructure. Semantic landmarks and structural meaning — the right element for the right job.</p>
+
+      <div class="tabs" role="tablist" aria-label="Product views">
+        <button class="tab is-active" role="tab" aria-selected="true" aria-controls="panel-timeline" id="tab-timeline">Timeline</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-documents" id="tab-documents">Documents</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="panel-client" id="tab-client">Client Portal</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel is-active" id="panel-timeline" role="tabpanel" aria-labelledby="tab-timeline">
+          <h3>Timeline</h3>
+          <p>Every phase, milestone, and dependency laid out on one shared schedule. Move a deadline and every linked task shifts with it — no separate spreadsheet to update by hand.</p>
         </div>
-        <div class="tool">
-          <h3>CSS3</h3>
-          <p>The skin. Responsive styling with Grid, Flexbox, and container queries.</p>
+        <div class="tab-panel" id="panel-documents" role="tabpanel" aria-labelledby="tab-documents" hidden>
+          <h3>Documents</h3>
+          <p>Drawings, contracts, and revisions live in one version history. The latest file is always the one everyone opens — nothing buried three folders deep in a shared drive.</p>
         </div>
-        <div class="tool">
-          <h3>JavaScript</h3>
-          <p>The logic. Basic state management and interactive functionality, kept lean.</p>
+        <div class="tab-panel" id="panel-client" role="tabpanel" aria-labelledby="tab-client" hidden>
+          <h3>Client Portal</h3>
+          <p>Clients see progress and leave feedback in one place, on the pages you choose to share — not by forwarding your internal thread.</p>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about" aria-labelledby="about-heading">
-      <div class="about-inner">
-        <h2 id="about-heading">You are the architect.</h2>
-        <p>Your code determines who has access to information and how the world experiences it. This page is Project 1 of the DecodeLabs internship track — the interface phase, built mobile-first and audited for LCP, CLS, and accessibility before a single line went further.</p>
+    <section class="workflow" id="workflow" aria-labelledby="workflow-heading">
+      <div class="section-head">
+        <p class="eyebrow">Built to fit</p>
+        <h2 id="workflow-heading">Fits how studios already work</h2>
+      </div>
+      <div class="workflow-grid">
+        <div class="workflow-card">
+          <h3>Solo practices</h3>
+          <p>Keep every client's project organized without a project manager on staff.</p>
+        </div>
+        <div class="workflow-card">
+          <h3>Small studios</h3>
+          <p>Give every architect visibility into every project, without another status meeting.</p>
+        </div>
+        <div class="workflow-card">
+          <h3>Growing firms</h3>
+          <p>Onboard new team members onto a live project in minutes, not a week of explaining.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="cta-inner">
+        <h2 id="cta-heading">You're still the architect. Keystone just holds the plans.</h2>
+        <a href="#get-started" class="btn btn-primary">Start your free trial</a>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq-heading">Before you start</h2>
+      </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <h3>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1">
+              Do I need to migrate my existing files?
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-1" hidden>
+            <p>No. Keystone links to the drive or storage you already use — your files stay where they are, and Keystone tracks the current version.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2">
+              Can clients see my internal notes?
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-2" hidden>
+            <p>Only what you explicitly share. Internal notes, budgets, and drafts stay on your side of the portal by default.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3>
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3">
+              What happens after the free trial?
+            </button>
+          </h3>
+          <div class="accordion-panel" id="faq-3" hidden>
+            <p>Your projects and history stay intact. Choose a paid plan or export everything — nothing is locked in.</p>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer" id="contact">
+  <footer class="site-footer" id="get-started">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-mark" aria-hidden="true">AK</span>
-        <span>Aresha&nbsp;Khalid</span>
+        <span class="logo-mark" aria-hidden="true">K</span>
+        <span>Keystone</span>
       </div>
-      <p class="footer-note">Project 1 &middot; Responsive Frontend Interface &middot; DecodeLabs Internship</p>
-      <a href="mailto:areshakhalid072@gmail.com" class="footer-link">areshakhalid072@gmail.com</a>
+      <p class="footer-note">Project management for architecture &amp; design studios.</p>
+      <a href="mailto:hello@keystone.example" class="footer-link">Start a free trial →</a>
     </div>
   </footer>
 
