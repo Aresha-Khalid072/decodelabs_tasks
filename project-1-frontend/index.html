@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aresha Khalid — Frontend Craftsmanship</title>
+  <meta name="description" content="Portfolio of Aresha Khalid, Full-Stack Intern at DecodeLabs — Project 1: Responsive Frontend Interface.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Aresha Khalid home">
+        <span class="logo-mark" aria-hidden="true">AK</span>
+        <span class="logo-text">Aresha&nbsp;Khalid</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#toolkit">Toolkit</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" id="top" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <p class="eyebrow">Full-Stack Intern &middot; DecodeLabs</p>
+        <h1 id="hero-heading">Building the interface layer,<br> one breakpoint at a time.</h1>
+        <p class="hero-lede">I'm Aresha — I turn wireframes into flexible, semantic front ends. No frameworks, just HTML5, CSS Grid, Flexbox, and a clear head for how a layout should breathe on any screen.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View the build</a>
+          <a href="#toolkit" class="btn btn-ghost">See the toolkit</a>
+        </div>
+      </div>
+      <div class="hero-blueprint" aria-hidden="true">
+        <div class="blueprint-frame">
+          <span class="frame-label">header</span>
+          <div class="frame-row">
+            <span class="frame-label small">nav</span>
+          </div>
+          <div class="frame-main">
+            <span class="frame-label">main</span>
+          </div>
+          <span class="frame-label">footer</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid" id="work" aria-labelledby="work-heading">
+      <div class="section-head">
+        <p class="eyebrow">01 — The Grid</p>
+        <h2 id="work-heading">Layout building blocks</h2>
+        <p class="section-lede">Each card below is a landmark from the page's own blueprint — filter by role to see how the pieces fit together.</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter layout blocks by role">
+        <button class="filter-chip is-active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="structure">Structure</button>
+        <button class="filter-chip" data-filter="style">Style</button>
+        <button class="filter-chip" data-filter="logic">Logic</button>
+      </div>
+
+      <div class="cards" id="cardGrid">
+        <article class="card" data-role="structure">
+          <span class="card-tag">Structure</span>
+          <h3>Semantic landmarks</h3>
+          <p>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;footer&gt; — a table of contents for screen readers and search engines alike.</p>
+        </article>
+        <article class="card" data-role="style">
+          <span class="card-tag">Style</span>
+          <h3>CSS Grid, macro layout</h3>
+          <p>A strict two-dimensional floor plan for the page: header, sidebar, main content, footer, defined once and reflowed per breakpoint.</p>
+        </article>
+        <article class="card" data-role="style">
+          <span class="card-tag">Style</span>
+          <h3>Flexbox, micro components</h3>
+          <p>Nav links, buttons, and card contents align themselves along one axis — small, self-correcting arrangements inside the grid's cells.</p>
+        </article>
+        <article class="card" data-role="logic">
+          <span class="card-tag">Logic</span>
+          <h3>State &amp; interactivity</h3>
+          <p>A handful of vanilla JS listeners handle the menu toggle and this very filter — no dependencies required.</p>
+        </article>
+        <article class="card" data-role="structure">
+          <span class="card-tag">Structure</span>
+          <h3>Fluid typography</h3>
+          <p>Headline and body sizes scale with clamp(), so text stays readable from a 320px phone to a 1440px desktop.</p>
+        </article>
+        <article class="card" data-role="logic">
+          <span class="card-tag">Logic</span>
+          <h3>Accessible by default</h3>
+          <p>Visible focus states, a skip link, and reduced-motion support are part of the floor, not an afterthought.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="toolkit" id="toolkit" aria-labelledby="toolkit-heading">
+      <div class="section-head">
+        <p class="eyebrow">02 — The Toolkit</p>
+        <h2 id="toolkit-heading">Raw materials</h2>
+      </div>
+      <div class="toolkit-grid">
+        <div class="tool">
+          <h3>HTML5</h3>
+          <p>The infrastructure. Semantic landmarks and structural meaning — the right element for the right job.</p>
+        </div>
+        <div class="tool">
+          <h3>CSS3</h3>
+          <p>The skin. Responsive styling with Grid, Flexbox, and container queries.</p>
+        </div>
+        <div class="tool">
+          <h3>JavaScript</h3>
+          <p>The logic. Basic state management and interactive functionality, kept lean.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="about-inner">
+        <h2 id="about-heading">You are the architect.</h2>
+        <p>Your code determines who has access to information and how the world experiences it. This page is Project 1 of the DecodeLabs internship track — the interface phase, built mobile-first and audited for LCP, CLS, and accessibility before a single line went further.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true">AK</span>
+        <span>Aresha&nbsp;Khalid</span>
+      </div>
+      <p class="footer-note">Project 1 &middot; Responsive Frontend Interface &middot; DecodeLabs Internship</p>
+      <a href="mailto:areshakhalid072@gmail.com" class="footer-link">areshakhalid072@gmail.com</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
